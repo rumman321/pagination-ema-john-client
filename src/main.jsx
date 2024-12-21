@@ -21,7 +21,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Shop></Shop>
+        element: <Shop></Shop>,
+        loader: cartProductsLoader
+
+        // loader: ()=>fetch(`https://ema-john-pagination-server-starter-smoky.vercel.app/productsCount`)
       },
       {
         path: 'orders',
